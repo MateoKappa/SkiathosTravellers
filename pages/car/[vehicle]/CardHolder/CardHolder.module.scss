@@ -1,0 +1,357 @@
+div.cardholder {
+  
+  margin: 1vh;
+  margin-left: 3vh;
+  margin-bottom: 3vh;
+  
+
+  div.cardcontainer {
+    
+    
+    width: 40vh;
+    height: 53.8vh;
+    
+    box-shadow: 1px 2px 20px 2px;
+    transition: 0.3s;
+    animation: ease-in-out; 
+
+    &:hover {
+      transform: scale(1.06);
+      box-shadow: 0px Opx 15px Opx;
+    }
+
+    div.cardbody{
+      width: 32vh;
+      height: 3vh;
+      margin-right: 1vh;
+      p{
+        font-size: 1.5vh;
+      }
+      
+    }
+
+    div.imagecontainer img {
+      padding-top: 2vh;
+      height: 27vh;
+      width: 33vh;
+      display: flex;
+      margin: auto;
+    }
+
+    div.cardcontent {
+      margin: 1rem;
+      margin-top: 0.5rem;
+
+      i {
+        font-size: 1vh;
+
+        
+        color: rgb(73, 173, 212);
+      }
+
+      div.cardtitle {
+        margin-bottom: 1rem;
+        border: 1px solid rgb(73, 173, 212);
+        color: rgb(25, 107, 139);;
+        padding: 0px 30px;
+        display: inline-block;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        padding-top:0.5vh;
+        padding-bottom:0.7vh;
+
+
+        h3 {
+          font-size: vh;
+          margin: 0;
+          padding: 0;
+        } 
+      }
+      
+      p{
+        margin: 0;
+        padding: 0;
+      }
+
+      div.btn_container {
+        display: flex;
+        margin: auto;
+        border: 1px solid rgb(73, 173, 212);
+        width: 30%;
+        margin-top: 11vh;
+        background-color: rgb(223, 228, 230);
+        a{
+        button {
+          display: block;
+          margin: auto;
+          padding-top: 1.5vh;
+          padding-bottom: 1vh;
+          padding-left: 1vh;
+          padding-right: 1vh;
+          background-color: white;
+          border: none;
+          transition: 0.2s;
+          margin-bottom: 0.5rem;
+          border-radius: 3px; 
+          background-color: rgb(223, 228, 230);
+          cursor: pointer;
+
+          
+        }
+ 
+          &:hover {
+          background: Orgba(27, 156, 252, 0.1);
+        }
+ 
+        h2{
+          font-size: 1.2vh;
+           text-transform: uppercase;
+           color: #1B9CFC;
+           text-decoration: none;
+           font-weight: bold;
+
+           
+        }}
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1049px) {
+  div.cardholder {
+      display: flex;
+      margin: auto;
+      align-items: center;
+      align-content: center;
+      height: 100%; 
+      margin-bottom: 3vh;
+  
+  
+      div.cardcontainer {
+  
+        width: 40vh;
+        height: 55.8vh;
+  
+        box-shadow: 1px 2px 20px 1px;
+        transition: 0.3s;
+        animation: ease-in-out;
+  
+        &:hover {
+          transform: scale(1.06);
+          box-shadow: 0px Opx 15px Opx;
+        }
+  
+        div.cardbody {
+          width: 100%;
+          height: 0vh;
+          margin-right: 1vh;
+  
+          p {
+            font-size: 1.5vh;
+          }
+  
+        }
+  
+        div.imagecontainer img {
+  
+          height: 27vh;
+          width: 33vh;
+        }
+  
+        div.cardcontent {
+          margin: 1rem;
+          margin-top: 0.5rem;
+  
+          i {
+            font-size: 1vh;
+           
+            color: rgb(73, 173, 212);
+          }
+  
+          div.cardtitle {
+            margin-bottom: 1rem;
+            border: 1px solid rgb(73, 173, 212);
+            color: rgb(25, 107, 139);
+            
+            padding: 0px 30px;
+            display: inline-block;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 0.5vh;
+            padding-bottom: 0.7vh;
+  
+            h3 {
+              font-size: 1.5vh;
+              margin: 0;
+              padding: 0;
+            }
+          }
+  
+          p {
+            margin: 0;
+            padding: 0;
+          }
+  
+          div.btn_container {
+            display: flex;
+            margin: auto;
+            border: 1px solid rgb(73, 173, 212);
+            margin-top: 40%;
+            background-color: rgb(223, 228, 230);
+            a{
+  
+            button {
+              display: block;
+              margin: auto;
+              padding-top: 1.5vh;
+              padding-bottom: 1vh;
+              padding-left: 1vh;
+              padding-right: 0vh;
+              
+              background-color: white;
+              border: none;
+              transition: 0.2s;
+              margin-bottom: 0.5rem;
+              border-radius: 3px;
+              background-color: rgb(223, 228, 230);
+              cursor: pointer;
+  
+  
+            }
+  
+            &:hover {
+              background: Orgba(27, 156, 252, 0.1);
+            }
+  
+            h2{
+              font-size: 1.2vh;
+              text-transform: uppercase;
+              color: #1B9CFC;
+              text-decoration: none;
+              font-weight: bold;
+            }}
+          }
+        }
+      }
+    }
+  
+  }
+
+  @media only screen and (max-width: 1930px) and (min-width: 1050px) {
+    div.cardholder {
+        display: flex;
+        align-items: space;
+    
+        margin: 1vh;
+        margin-left: 3vh;
+        margin-bottom: 3vh;
+    
+    
+        div.cardcontainer {
+    
+          width: 40vh;
+          height: 58.8vh;
+    
+          box-shadow: 1px 2px 20px 2px;
+          transition: 0.3s;
+          animation: ease-in-out;
+    
+          &:hover {
+            transform: scale(1.06);
+            box-shadow: 0px Opx 15px Opx;
+          }
+    
+          div.cardbody {
+            width: 36vh;
+            height: 3vh;
+            margin-right: 1vh;
+    
+            p {
+              font-size: 1.5vh;
+            }
+    
+          }
+    
+          div.imagecontainer img {
+    
+            height: 27vh;
+            width: 40vh;
+          }
+    
+          div.cardcontent {
+            margin: 1rem;
+            margin-top: 0.5rem;
+    
+            i {
+              font-size: 1vh;
+             
+              color: rgb(73, 173, 212);
+            }
+    
+            div.cardtitle {
+              margin-bottom: 1rem;
+              border: 1px solid rgb(73, 173, 212);
+              color: rgb(25, 107, 139);
+              ;
+              padding: 0px 30px;
+              display: inline-block;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              padding-top: 0.5vh;
+              padding-bottom: 0.7vh;
+    
+    
+              h3 {
+                font-size: 1.6vh;
+                margin: 0;
+                padding: 0;
+              }
+            }
+    
+            p {
+              margin: 0;
+              padding: 0;
+            }
+    
+            div.btn_container {
+              display: flex;
+              margin: auto;
+              border: 1px solid rgb(73, 173, 212);
+
+              margin-top: 11vh;
+              background-color: rgb(223, 228, 230);
+              a{
+              button {
+                display: block;
+                margin: auto;
+                padding-top: 1.5vh;
+                padding-bottom: 1vh;
+                padding-left: 1vh;
+                padding-right: 0vh;
+                background-color: white;
+                border: none;
+                transition: 0.2s;
+                margin-bottom: 0.5rem;
+                border-radius: 3px;
+                background-color: rgb(223, 228, 230);
+                cursor: pointer;
+    
+    
+              }
+    
+              &:hover {
+                background: Orgba(27, 156, 252, 0.1);
+              }
+    
+              h2 {
+                font-size: 1.2vh;
+                text-transform: uppercase;
+                color: #1B9CFC;
+                text-decoration: none;
+                font-weight: bold;
+              }}
+            }
+          }
+        }
+      }
+
+   
+      }
