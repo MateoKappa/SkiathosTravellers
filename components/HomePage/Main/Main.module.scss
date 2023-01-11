@@ -1,0 +1,97 @@
+div.Homepage {
+  height: 100vh;
+  background-size: cover;
+  width: 100%;
+  z-index: auto;
+
+  div.text {
+    height: 52%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: flex-end;
+    font-size: 100px;
+    color: white;
+    margin-left: 120px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    margin-top: -80px;
+    h1 {
+      font-size: 110px;
+    }
+    div.weather {
+      text-align: end;
+      font-size: 40px;
+      margin-right: 150px;
+      display: grid;
+      margin-bottom: -20px;
+
+      i {
+        font-size: 140px;
+      }
+      div.time {
+        margin-right: -20px;
+      }
+    }
+  }
+  button.herobtn {
+    font-size: 14px;
+    color: #fcfcfc;
+    background-color: transparent;
+    padding: 30px 50px;
+    border: 2.5px solid #fff;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 1000ms;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 300px;
+    font-size: 20px;
+    font-weight: bold;
+    &:hover {
+      padding: 30px 70px;
+      transform: translateY(-0px);
+      background-color: #0066cc;
+      color: #fff;
+      border: solid 2px #0066cc;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.Homepage {
+    height: 100vh;
+    div.text {
+      margin: 0;
+      padding-top: 150px;
+      display: grid;
+      grid-template-columns: auto;
+      place-items: center;
+      text-align: center;
+      h1 {
+        font-size: 60px;
+      }
+      div.weather {
+        margin: 20px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        margin-top: 40px;
+        i {
+          font-size: 100px;
+        }
+        div.time {
+          margin: 0;
+        }
+      }
+    }
+    button.herobtn {
+      margin-top: 200px;
+      padding: 20px;
+      font-size: 15px;
+      &:hover {
+        padding: 20px 40px;
+      }
+    }
+  }
+}

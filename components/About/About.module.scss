@@ -1,0 +1,98 @@
+div.wrapper {
+ 
+div.aboutus {
+ min-height:65VH;
+ width: 100%;
+ background-image: linear-gradient(rgba(4, 17, 19, 0.6), rgba(4, 9, 30, 0.6)), url('/about.jpg');
+ background-position:0px -100px ;
+ background-size: cover;
+ position: relative;
+ 
+ font-family: Gabriola;
+
+ h1{
+  text-align: center;
+  padding-top: 16vh;
+  font-size: 10vh;
+  color: white;
+ }
+ h2 {
+  text-align: center;
+
+  font-size: 3vh;
+  color: white;
+ }}
+div.who{
+ 
+  padding-top: 4vh;
+
+   h1 {
+    margin-top: 5vh;
+    position: relative;;
+    font-family: Gabriola;
+    font-weight: 100;
+    text-decoration: underline solid black 3px;
+    color: black;
+    padding: 12px 62px;
+    font-size: 4vh;
+    background: transparent;
+    text-align: center;
+   
+
+    cursor: pointer;
+  
+ }
+  h2{
+    text-align: center;
+    padding-bottom: 4vh;
+    margin-left: 50vh;
+    margin-right: 50vh;
+    font-size: 3vh;
+    font-family: Gabriola;
+  }
+
+
+}
+
+
+}
+
+@media screen and (max-width:900px) {
+div.wrapper {
+
+    div.aboutus {
+
+      h1 {
+
+      }
+
+      h2 {
+
+      }
+    }
+
+    div.who {
+
+    
+
+      h1 {
+     
+
+      }
+
+      h2 {
+        display: block;
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        padding-bottom: 4vh;
+       
+        font-size: 3vh;
+        font-family: Gabriola;
+      }
+
+
+    }
+
+
+  } }

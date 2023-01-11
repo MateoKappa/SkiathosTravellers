@@ -1,0 +1,145 @@
+div.cardholder {
+  --font-text: 18px;
+  display: flex;
+  align-items: space;
+  margin: 1vh;
+  margin-left: 3vh;
+  margin-bottom: 3vh;
+  div.cardcontainer {
+    z-index: 1;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    border-bottom: 0px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.432);
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgb(255, 255, 255);
+    div.cardbody {
+      p {
+        font-size: var(--font-text);
+      }
+    }
+    div.imagecontainer {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    div.cardcontent {
+      margin: 20px;
+      position: relative;
+      div.cardtitle {
+        border-bottom: 2px solid rgb(25, 107, 139);
+        color: rgb(25, 107, 139);
+        padding: 0px 30px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding-top: 0.5vh;
+        padding-bottom: 0.7vh;
+        margin: auto;
+        text-align: center;
+        h3 {
+        }
+      }
+      div.cardbody {
+        p {
+          margin-top: 20px;
+          margin-bottom: 80px;
+        }
+      }
+      div.btn_container {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%);
+        button {
+          background-image: radial-gradient(
+            100% 100% at 100% 0,
+            #5adaff 0,
+            #5468ff 100%
+          );
+          border: 0;
+          border-radius: 6px;
+          box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+            rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+            rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+          box-sizing: border-box;
+          color: #fff;
+          cursor: pointer;
+          height: 38px;
+          padding-left: 12px;
+          padding-right: 12px;
+          font-size: 15px;
+          font-weight: 700;
+        }
+
+        h2 {
+        }
+      }
+    }
+  }
+  div.preview {
+    button {
+      height: 30px;
+      width: 90px;
+      border: none;
+      margin-top: 25px;
+      margin-left: -15px;
+      z-index: 0;
+      background-color: rgb(54, 195, 214);
+      border-radius: 5px;
+      color: white;
+      font-family: "Courier New", Courier, monospace;
+      cursor: pointer;
+      transition: 300ms;
+      &:hover {
+        transition: 300ms;
+        color: rgb(255, 217, 0);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  div.cardholder {
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.cardholder {
+    div.cardcontainer {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  div.cardholder {
+    position: relative;
+    div.preview {
+      position: absolute;
+      z-index: 2;
+      top: 2px;
+      left: 2px;
+      button {
+        height: 30px;
+        width: 90px;
+        border: none;
+        margin: 0;
+
+        background-color: rgb(54, 195, 214);
+        border-radius: 0px;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        cursor: pointer;
+        transition: 300ms;
+        &:hover {
+          transition: 300ms;
+          color: rgb(255, 217, 0);
+        }
+      }
+    }
+  }
+}

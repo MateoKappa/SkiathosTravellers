@@ -1,0 +1,226 @@
+div.forum {
+  width: 100%;
+  background-color: rgb(240, 240, 240);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: calc(100vh + 100px);
+  padding-top: 70px;
+  animation: change 10s infinite linear;
+  h2 {
+    padding-top: 5vh;
+    font-size: 5vh;
+
+    font-family: sans-serif;
+    text-align: center;
+    color: rgb(31, 15, 36);
+  }
+  h4 {
+    margin-top: 3vh;
+    font-size: 2vh;
+
+    font-family: sans-serif;
+    text-align: center;
+    color: rgb(84, 79, 85);
+    margin-bottom: 4vh;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    border-radius: 20px;
+    width: 75%;
+    height: 70%;
+    transition: 0.3s;
+    animation: ease-in-out;
+    color: black;
+    background-color: white;
+
+    div.contact_information {
+      background-color: rgb(77, 50, 119);
+      width: 35%;
+      border-radius: 20px;
+
+      h1 {
+        color: White;
+        font-size: 3.5vh;
+        font-weight: 500;
+        padding: 4.5vh;
+        padding-bottom: 0vh;
+      }
+
+      h4 {
+        color: rgb(218, 218, 218);
+        opacity: 70%;
+        font-weight: 100;
+        font-size: 2vh;
+      }
+
+      div.icons {
+        display: flex;
+        flex-direction: column;
+        margin: 4.5vh;
+        margin-top: 7vh;
+
+        i {
+          font-size: 1.5vh;
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 5vh;
+
+          p {
+            color: white;
+            margin-left: 2vh;
+          }
+        }
+      }
+
+      div.socials {
+        display: flex;
+        margin: auto;
+
+        a {
+          display: flex;
+          margin: auto;
+          i {
+            margin-top: 15vh;
+            font-size: 3vh;
+          }
+        }
+      }
+    }
+    div.inputs {
+      form {
+        h1 {
+          text-align: center;
+          color: rgb(52, 66, 194);
+        }
+
+        input {
+          border-radius: 5px;
+          text-transform: none;
+          border: none;
+          border-bottom: 1px solid grey;
+          opacity: 70%;
+          border-radius: 0px;
+          margin: 6.5vh;
+          height: 5vh;
+          width: 32%;
+          margin-bottom: 10px;
+          outline: none;
+        }
+
+        textarea.bigtext {
+          width: 95%;
+          height: 320px;
+          border: 1px solid black;
+          resize: none;
+          margin: 20px;
+        }
+
+        button {
+          display: flex;
+          margin: auto;
+          width: 10vh;
+          height: 4vh;
+          background-color: #556cd6;
+          align-items: center;
+          justify-content: center;
+          border-radius: 4px;
+          color: white;
+          border: 0;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  div.forum {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      div.contact_information {
+        width: 100%;
+        h1 {
+          text-align: center;
+        }
+        div.socials {
+          display: flex;
+          margin: auto;
+
+          a {
+            display: flex;
+            margin: auto;
+            i {
+              margin-top: 15vh;
+              font-size: 3vh;
+              margin-bottom: 40px;
+            }
+          }
+        }
+      }
+      div.inputs {
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          input {
+            width: 90%;
+            border-bottom: 1px solid grey;
+          }
+
+          textarea.bigtext {
+            width: 90vw;
+            height: 222.5px;
+            border: 1px solid black;
+            resize: none;
+            margin: 20px;
+            padding: 20px;
+          }
+
+          button {
+            &:hover {
+              opacity: 0.75;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  div.forum {
+    .container {
+      div.inputs {
+        form {
+          h1 {
+          }
+          input {
+            width: 87%;
+          }
+
+          button {
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
+}
