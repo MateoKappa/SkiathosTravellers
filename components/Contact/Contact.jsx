@@ -1,12 +1,10 @@
 import styles from "./Contact.module.scss";
-import {useState, useRef} from "react";
+import { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 export default function Contact() {
   const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_462g39c",
@@ -24,11 +22,11 @@ export default function Contact() {
       );
     e.target.reset();
   };
+
   return (
     <div className={styles.forum}>
       <h2>Contact Us</h2>
       <h4>Any questions or remarks? Just write us a message!</h4>
-
       <div className={styles.container}>
         <div className={styles.contact_information}>
           <h1>Contact Infromation</h1>

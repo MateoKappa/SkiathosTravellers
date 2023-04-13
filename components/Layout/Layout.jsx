@@ -1,8 +1,8 @@
 import Head from "next/head";
 import styles from "./Layout.module.scss";
-import Navbar from "../../components/Navbar/Navbar";
-
-function Layout({children}) {
+import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/footer";
+function Layout({ children }) {
   return (
     <div className={styles.index}>
       <Head>
@@ -31,11 +31,11 @@ function Layout({children}) {
           content="black-translucent"
         />
       </Head>
-      <body>
+      <div>
         {" "}
         <Navbar />
         {children}
-      </body>
+      </div>
     </div>
   );
 }

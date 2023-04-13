@@ -1,22 +1,22 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import styles from "./Navbar.module.scss";
-import {useRouter} from "next/router";
-import Window from "../Window/window";
-import {motion, AnimatePresence} from "framer-motion";
-function Navbar({props}) {
+import { useRouter } from "next/router";
+import Window from "../../Window/Window";
+import { motion, AnimatePresence } from "framer-motion";
+function Navbar({ props }) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
-  const {height, width} = Window();
-  const LinkAnimation = ({link, name}) => {
+  const { height, width } = Window();
+  const LinkAnimation = ({ link, name }) => {
     return (
       <motion.a
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{duration: 0.4}}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4 }}
         key={menuOpen}
         exit={{
           opacity: 0,
-          transition: {opacity: 0, duration: "0.3"},
+          transition: { opacity: 0, duration: "0.3" },
         }}
         href={link}
       >
@@ -33,7 +33,7 @@ function Navbar({props}) {
             {router.path == "/cruises" || router.path == "/vehicle" ? (
               <img src="/logo.png" />
             ) : (
-              <img src="/logo2.png" />
+              <img src="/logo.png" />
             )}
           </div>
         </div>
@@ -63,14 +63,14 @@ function Navbar({props}) {
       <AnimatePresence exitBeforeEnter>
         {menuOpen ? (
           <motion.div
-            initial={{width: 0, opacity: 0}}
-            animate={{width: "100vw", opacity: 1}}
-            transition={{duration: 0.4}}
+            initial={{ width: 0, opacity: 0 }}
+            animate={{ width: "100vw", opacity: 1 }}
+            transition={{ duration: 0.4 }}
             key={menuOpen}
             exit={{
               width: 0,
               opacity: 0,
-              transition: {opacity: 0, duration: "0.4"},
+              transition: { opacity: 0, duration: "0.4" },
             }}
             className={styles.links}
           >

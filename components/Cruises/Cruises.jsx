@@ -1,15 +1,14 @@
-import {useState, useEffect, useRef} from "react";
-import {supabase} from "../../utils/supabaseCreate";
+import { useState, useEffect, useRef } from "react";
+import { supabase } from "../../utils/supabaseCreate";
 import styles from "./Cruises.module.scss";
 import Cardholder from "./CardHolder/CardHolder";
-import ReactMapboxGl, {Layer, Feature} from "react-mapbox-gl";
+import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import useWindowDimensions from "../Window/window";
 import Loader from "../Loader/loader";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 import React from "react";
 import useStore from "../DataStorage";
-import ImageSlider from "../hooks/ImageSlider/ImageSlider";
 const Map = ReactMapboxGl({
   accessToken:
     "pk.eyJ1Ijoia3Vyb3Nha2lyYWt1bjEiLCJhIjoiY2wyM2F1aHVuMW84MTNjbHBndnJieDR3dCJ9.lczoc6bcyIbLZGSKkqbQrA",
@@ -19,18 +18,17 @@ function CruisePage() {
   const router = useRouter();
   const [cruise, setCruise] = useState();
   const [cruiseImage, setCruiseImage] = useState();
-  const {height, width} = useWindowDimensions();
-  let [meters, setMeters] = useState(true);
+  const { height, width } = useWindowDimensions();
   const [imageCounter, setImageCounter] = useState(0);
   const [shadow, setShadow] = useState(false);
   const cruiseID = useStore((state) => state.cruiseID);
   const preview = useStore((state) => state.preview);
   const previewPhone = useStore((state) => state.previewPhone);
   const fetchCruises = async () => {
-    const {data, error} = await supabase
+    const { data, error } = await supabase
       .from("cruises")
       .select()
-      .order("id", {ascending: true});
+      .order("id", { ascending: true });
     setCruise(data);
 
     if (error) {
@@ -52,7 +50,7 @@ function CruisePage() {
     cruise.sort();
   }
   const get_cruise_by_id = async (id) => {
-    const {data} = await supabase.from("cruises").select().match({id: id});
+    const { data } = await supabase.from("cruises").select().match({ id: id });
 
     let images = JSON.parse(data[0]?.images);
     data[0].parse_images = images;
@@ -155,7 +153,7 @@ function CruisePage() {
             <Layer
               type="symbol"
               id="marker"
-              layout={{"icon-image": "marker-15"}}
+              layout={{ "icon-image": "marker-15" }}
             ></Layer>
           </Map>
         </div>

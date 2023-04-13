@@ -1,14 +1,12 @@
-import React, {useEffect, useState} from "react";
-import {useRouter} from "next/router";
-import {supabase} from "../../utils/supabaseCreate";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { supabase } from "../../utils/supabaseCreate";
 import styles from "./id.module.scss";
-import ImageSlider from "../../components/hooks/ImageSlider/ImageSlider";
 import useWindowDimensions from "../../components/Window/window";
-import {loadStripe} from "@stripe/stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import Datepicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Contact_us_footer from "../../components/HomePage/Contact_us_footer/Contact_us_footer";
-import About_us_footer from "../../components/HomePage/About_us_footer/About_us_footer";
+
 import Loader from "../../components/Loader/loader.jsx";
 
 const PUBLIC_KEY =
@@ -28,7 +26,7 @@ function Id() {
   const [selectedDate, setSelectedDate] = useState("");
   const [price, setPrice] = useState();
   const [email, setEmail] = useState("");
-  const {height, width} = useWindowDimensions();
+  const { height, width } = useWindowDimensions();
 
   const submit_local_storage = () => {
     localStorage.setItem("name", names);
@@ -47,10 +45,10 @@ function Id() {
   }, [tickets]);
 
   const get_cruise_by_id = async () => {
-    const {data} = await supabase
+    const { data } = await supabase
       .from("cruises")
       .select()
-      .match({id: Router.query?.id});
+      .match({ id: Router.query?.id });
 
     let images = JSON.parse(data[0].images);
     data[0].parse_images = images;

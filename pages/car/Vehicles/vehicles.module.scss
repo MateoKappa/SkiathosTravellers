@@ -1,0 +1,29 @@
+div.page {
+  height: 100%;
+  height: 400px;
+  position: relative;
+
+  div.images {
+    display: flex;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    z-index: 1;
+    transition: 1s;
+  }
+
+  button[id="left"] {
+    position: absolute;
+    z-index: 2;
+    background-color: red;
+    padding: 20px;
+  }
+
+  button[id="right"] {
+    position: absolute;
+    padding: 20px;
+    z-index: 2;
+    right: 0;
+    background-color: red;
+  }
+}

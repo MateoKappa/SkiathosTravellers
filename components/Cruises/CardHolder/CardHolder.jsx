@@ -1,7 +1,7 @@
 import styles from "./CardHolder.module.scss";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 import useStore from "../../DataStorage";
-const Cardholder = ({image, title, body, id}) => {
+const Cardholder = ({ image, title, body, id }) => {
   const router = useRouter();
   const findCruise = useStore((state) => state.findCruise);
   const previewPhone = useStore((state) => state.previewPhone);

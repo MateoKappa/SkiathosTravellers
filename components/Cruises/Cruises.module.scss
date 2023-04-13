@@ -8,7 +8,7 @@
 }
 div.page {
   position: relative;
-  background-color: rgb(233, 233, 233);
+  background-color: rgba(255, 255, 255, 0.944);
   div.heading {
     display: grid;
     height: 600px;
@@ -18,7 +18,7 @@ div.page {
       clip-path: polygon(0 0, 84% 0, 100% 100%, 0 100%);
       background-image: url("https://www.greekboston.com/wp-content/uploads/2019/07/skiathos-greece.jpg");
       background-size: cover;
-      margin-right: -100px;
+      margin-right: -4.5vw;
     }
     div.textHeading {
       position: absolute;
@@ -47,15 +47,19 @@ div.page {
         url("https://www.greeka.com/photos/sporades/skiathos/hero/skiathos-island-3-1920.jpg");
       background-size: cover;
       clip-path: polygon(4% 0, 100% 0, 100% 100%, 20% 100%);
-      margin-left: -105px;
+      margin-left: -6vw;
     }
   }
   div.filter_Map {
     display: grid;
     grid-template-columns: 50% 50%;
+
     div.bookContainer {
       height: 130px;
-      background-color: #1c455afa;
+      border-radius: 50px;
+      background: #1c455afa;
+      box-shadow: 5px 5px 10px #142129fa, -5px -5px 10px #8b8b8b30;
+
       margin: 20px;
       margin-top: 60px;
       border-radius: 20px;
@@ -146,6 +150,7 @@ div.page {
   div.map {
     width: 90%;
     margin: 60px;
+    margin-top: 52px;
     margin-bottom: 0;
     padding: 10px;
   }
@@ -196,13 +201,16 @@ div.page {
             font-weight: 500;
             text-align: center;
           }
+          h3 {
+            padding: 20px 60px;
+          }
           h2 {
             text-decoration: underline 2px rgba(223, 216, 216, 0.829);
             font-weight: 600;
           }
           span {
             transition: 1s;
-            font-size: 80px;
+            font-size: 60px;
             position: absolute;
             right: 50px;
             bottom: 50px;

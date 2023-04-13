@@ -1,7 +1,6 @@
 import Navbar1 from "../Navbar/Navbar";
 import styles from "../About/About.module.scss";
-import Footer from "../HomePage/About_us_footer/About_us_footer";
-import Footer1 from "../HomePage/Contact_us_footer/Contact_us_footer";
+
 function About() {
   return (
     <div className={styles.wrapper}>
@@ -52,8 +51,6 @@ function About() {
           </h2>
         </div>
       </div>
-      <Footer1 />
-      <Footer />
     </div>
   );
 }
